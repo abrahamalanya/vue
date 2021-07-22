@@ -1,2 +1,2 @@
-# vue2
-Vue2
+# vue
+Vue
