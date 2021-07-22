@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <div id="app" class="box">
+                <h4>{{ title }}</h4>
+                {{ message }}
+            </div>
+            <div id="app-2" class="box">
+                <h4>{{ title }}</h4>
+                <span v-bind:title="message">
+                    {{ content }}
+                </span>
+            </div>
+            <div id="app-3" class="box">
+                <h4>{{ title }}</h4>
+                <span v-if="view">{{ message }}</span>
+            </div>
+            <div id="app-4" class="box">
+                <h4>{{ title }}</h4>
+                <div class="box">
+                    <ol>
+                        <li v-for="modulo in modules">
+                            {{ modulo }}
+                        </li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <ol>
+                        <li v-for="modulo in detail_module">
+                            {{ modulo.name_module }}
+                            <ul>
+                                <li v-for="detalle in modulo.detail">
+                                    {{ detalle }}
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="app-5" class="box">
+                <h4>{{ title }}</h4>
+                <div class="row">
+                    <div class="col-6">
+                        <button v-on:click="click_message" class="btn btn-primary">{{ title_button }}</button>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" v-on:change="change_message"
+                            placeholder="Cualquier texto, fijarse en consola" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div id="app-6" class="box">
+                <h4>{{ title }}</h4>
+                <div class="card">
+                    <div class="card-body">
+                        {{ message }}
+                    </div>
+                </div>
+                <textarea cols="80" rows="10" v-model="message"></textarea>
+            </div>
+            <div id="app-7" class="box">
+                <h4>{{ title }}</h4>
+                <div class="card-group">
+                    <app-card v-for="user in users" v-bind:user="user" v-bind:key="user.id">
+                    </app-card>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src=" ./script.js"></script>
+</body>
+
+</html>
