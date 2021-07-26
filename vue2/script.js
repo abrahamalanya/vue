@@ -1,3 +1,18 @@
+var linkview = new Vue({
+    el: '#link-view',
+    data: {
+        links: [
+            {
+                prefix: 'introduccion',
+                route: './index.html'
+            },
+            {
+                prefix: 'instancia',
+                route: './instancia/index.html'
+            }
+        ]
+    }
+});
 var app = new Vue({
     el: '#app',
     data: {

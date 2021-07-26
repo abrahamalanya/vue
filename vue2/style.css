@@ -16,3 +16,7 @@ main {
     user-select: none;
     overflow-x: auto;
 }
+.link-view{
+    text-align: center;
+    padding: 15px 0;
+}
