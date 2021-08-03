@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/1694/1694364.png">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- vue2 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        nav {
+            text-align: center;
+        }
+
+        main {
+            width: 80%;
+            margin: auto;
+        }
+
+        .box {
+            user-select: none;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Goals by Abraham</h1>
+            <!-- <div class="row box">
+                <ul>
+                    <li>
+                        <a href="#goal" class="btn btn-primary">August</a>
+                    </li>
+                    <li>
+                        <a href="#goal-1" class="btn btn-primary">September</a>
+                    </li>
+                    <li>
+                        <a href="#goal-2" class="btn btn-primary">October</a>
+                    </li>
+                </ul>
+            </div> -->
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="box" id="goal">
+                <div class="card">
+                    <h5 class="card-header">{{ month }} - {{ title }}</h5>
+                    <div class="card-body">
+                        <ol>
+                            <li v-for="goal in content">{{goal.description}}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="goal-1">
+                <div class="card">
+                    <h5 class="card-header">{{ month }} - {{ title }}</h5>
+                    <div class="card-body">
+                        <ol>
+                            <li v-for="goal in content">{{goal.description}}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="goal-2">
+                <div class="card">
+                    <h5 class="card-header">{{ month }} - {{ title }}</h5>
+                    <div class="card-body">
+                        <ol>
+                            <li v-for="goal in content">{{goal.description}}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

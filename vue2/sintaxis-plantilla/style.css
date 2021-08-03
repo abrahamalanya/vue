@@ -1,0 +1,8 @@
+main{
+    width: 80%;
+    margin: auto;
+}
+.box{
+    user-select: none;
+    padding-bottom: 20px;
+}
